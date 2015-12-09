@@ -1,0 +1,257 @@
+/*padrao de fundo*/
+body{
+	background-image: url("images/background.jpg");
+}
+
+
+/*formatacao global*/
+*{
+	color: #070602;		/*cor de texto*/
+	font-family:Book Antiqua;
+	border-radius: 5px;
+}
+
+
+/* "body" sem contar com a parte da imagem de fundo*/
+div#bodyFormat{
+	width: 1210px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url("images/background2.jpg");	
+	border: 2px ridge #92671D;									
+}
+*[draggable=true]{
+	cursor:move;
+}
+/* logo + titulo */
+a#logotitle{
+	background-image: url("images/logotitle.png");
+	height: 200px;
+	width: 800px;
+	display: block;
+	margin: 10px auto;
+}
+/* div com h3 e login/out */
+div#header{
+	margin-left: 35px;
+	margin-right: 35px;
+	border: 4px ridge #92671D;										
+	height: 100px;
+	display: table;
+	background-image: url("images/background_highscores.jpg");
+}
+h3{
+	padding: 27px;
+	display: table;
+    margin: 0 auto;
+	width: 65%;
+	float: left;
+	border-right: 4px ridge #92671D;
+	border-radius: 0px;									
+	
+}
+div#loginmensage{
+	margin-left: -25px;
+	font-size: 11px;
+	color: red;
+}
+div#userpass, div#logout{
+  	width: 230px;
+  	height: 80px;
+	float: right;
+}
+
+/* div configuracao, contentor "geral" com tipo, numero de jogadores e dificuldade do jogo */
+div#configuracao{
+	width: 908px;
+	height: 150px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25px;
+	display: table;
+	border: 4px ridge #92671D;
+	background-image: url("images/background_highscores.jpg");							
+}
+
+div.config{
+	width:280px;
+	height: 150px;
+	padding: 15px 10px;
+	float: left; 
+	text-align: center;
+}	
+div#middleConfig{
+	height: 150px;
+	width: 280px;
+	border-left: 4px ridge #92671D;									
+	border-right: 4px ridge #92671D;									
+}
+form#tipo{
+	margin-left: 30%;
+	text-align: left;
+}
+form#njogadores{
+	margin-left: 20%;
+	text-align: left;
+}
+form#size{
+	margin-left: 30%;
+	text-align: left;	
+}
+
+/* div control, botoes de iniciar jogo, abandonar e sincronizar */
+div#control{
+	display: table;
+	margin: 10px auto;
+	/*border: 4px ridge #92671D;*/										
+}
+
+div#syncMessage{
+	text-align: center;
+}
+/*"consola" para aparecer mensagens, barra de progresso, pontos*/
+div#logM{
+	display:none;
+	margin: 0 auto;	
+	border-bottom: 4px ridge #92671D;
+	border-top: 4px ridge #92671D;
+	width: inherit;
+}
+
+div#points, div#pointsB{
+	text-align: left;
+	float: left;
+	margin-left:25px;
+	margin-top:5px;
+	font-size: 20px;
+}
+div#pointsFade{
+	margin-left: 5px;
+	margin-top:5px;
+	margin-right: 5px;
+	font-size: 20px;
+	float: left;
+}
+div#time{
+	text-align: center;
+	margin-top: 10px;
+	font-size: 35px;
+}
+canvas{
+	padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+input#abandonarJogo2, div#pointsB{
+	float:right;
+	margin-right:25px;
+	margin-top:5px;
+}
+/* tabela highscore */
+table#highscores{
+	display: table;
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 4px ridge #92671D;										
+	background-image: url("images/dragon.png"), url("images/background_highscores.jpg");
+	background-repeat: no-repeat, repeat;
+	background-position: center, top;
+	color: #E3ECD7;
+}
+table#highscores td {
+	text-align: right;
+	display: table-cell;
+	margin-right: 25px;
+	font-size: 25px;
+}
+
+/* tabuleiro (jogo + pontos/progresso resultados) */
+div#jogo{
+	width: 1200px;
+	height: 550px;
+	margin: 0 auto;
+	display: none;
+	border: 5px ridge #92671D;
+
+}
+/* jogo */
+table#tab, table#results{
+	width: 640px;
+	height:480px;
+	margin: 10px;
+	border-spacing:0;
+	text-align: center;
+	display: table;
+	font-size: 15px;
+	
+}
+table#tab{
+	float: left;
+	width: 640px;
+	background-image: url("images/dragon.jpg");
+}
+
+
+table#tab td{
+	background-color: #D9BB89;
+	border:  5px double #92671D;
+	color: #ffffff;
+	border-radius: 0px;
+}
+
+
+table#results{
+	float: left;
+	height: 480px;
+	width: 500px;
+	background-image: url("images/dragon.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+table#results td{
+	background-color: #D9BB89;
+	border:  5px double #92671D;
+	color: #ffffff;
+	border-radius: 0px;
+}
+div#progressBar{
+	
+	height: 80px;
+	width: 1145px;
+	margin-left: auto;
+	margin-right:auto;
+	background-image: url("images/winning_message.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+
+img#progress{
+	margin-left: -1050px;
+	float:left;
+	width:auto;
+	height:80px;
+	position: static;
+
+}
+img#dragon{
+	
+	float:right;
+	margin-right: -1050px;
+	width: 1119px;
+	height: 80px;
+	position:static;
+}
+
+
+/* footer */
+p#footer{
+	text-align: center;
+	font-size: 15px;
+	padding: 5px;
+}

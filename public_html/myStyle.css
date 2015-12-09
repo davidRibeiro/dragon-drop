@@ -1,0 +1,217 @@
+/*padrao de fundo*/
+body{
+	background-image: url("images/background.jpg");
+}
+
+
+/*formatacao global*/
+*{
+	color: #070602;		/*cor de texto*/
+	font-family:Book Antiqua;
+	border-radius: 5px;
+}
+
+
+/* "body" sem contar com a parte da imagem de fundo*/
+div#bodyFormat{
+	width: 1000px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url("images/background2.jpg");	
+	border: 2px ridge #92671D;									
+}
+
+/* logo + titulo */
+a#logotitle{
+	background-image: url("images/logotitle.png");
+	height: 200px;
+	width: 800px;
+	display: block;
+	margin: 10px auto;
+}
+/* div com h3 e login/out */
+div#header{
+	margin-left: 35px;
+	margin-right: 35px;
+	border: 4px ridge #92671D;										
+	height: 100px;
+	display: table;
+	background-image: url("images/background_highscores.jpg");
+}
+h3{
+	padding: 27px;
+	display: table;
+    margin: 0 auto;
+	width: 65%;
+	float: left;
+	border-right: 4px ridge #92671D;
+	border-radius: 0px;									
+	
+}
+div#userpass, div#logout{
+  	width: 230px;
+  	height: 80px;
+	float: right;
+}
+
+/* div configuracao, contentor "geral" com tipo, numero de jogadores e dificuldade do jogo */
+div#configuracao{
+	width: 908px;
+	height: 150px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25px;
+	display: table;
+	border: 4px ridge #92671D;
+	background-image: url("images/background_highscores.jpg");							
+}
+
+div.config{
+	width:280px;
+	height: 150px;
+	padding: 15px 10px;
+	float: left; 
+	text-align: center;
+}	
+div#middleConfig{
+	height: 150px;
+	width: 280px;
+	border-left: 4px ridge #92671D;									
+	border-right: 4px ridge #92671D;									
+}
+form#tipo{
+	margin-left: 30%;
+	text-align: left;
+}
+form#njogadores{
+	margin-left: 20%;
+	text-align: left;
+}
+form#size{
+	margin-left: 30%;
+	text-align: left;	
+}
+
+/* div control, botoes de iniciar jogo, abandonar e sincronizar */
+div#control{
+	display: table;
+	margin: 10px auto;
+	border: 4px ridge #92671D;										
+}
+
+/* tabela highscore */
+table#highscores{
+	display: table;
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 4px ridge #92671D;										
+	background-image: url("images/dragon.png"), url("images/background_highscores.jpg");
+	background-repeat: no-repeat, repeat;
+	background-position: center, top;
+	color: #E3ECD7;
+}
+table#highscores td {
+	text-align: right;
+	display: table-cell;
+	margin-right: 25px;
+	font-size: 25px;
+}
+
+/* tabuleiro (jogo + pontos/progresso resultados) */
+div#jogo{
+	width: 950px;
+	height: 550px;
+	margin: 0 auto;
+	display: none;
+	border: 5px ridge #92671D;
+
+}
+/* jogo */
+table#tab, table#results{
+	width: 640px;
+	height:480px;
+	margin: 10px;
+	border-collapse: collapse;
+	text-align: center;
+	display: table;
+	
+}
+table#tab{
+	float: left;
+	width: 640px;
+	background-image: url("images/dragon.jpg");
+}
+
+
+table#tab td{
+	background-image: url("images/tab_td_background.png");	
+	background-size: 100%;
+	color: #ffffff;
+	font-size: 25px;
+	border-radius: 0px;
+}
+div#points {
+	float: left;
+	height: 35px;
+	width: 40px;
+	margin: 240px auto;
+	text-align: center;
+}
+
+
+table#results{
+	float: left;
+	height: 480px;
+	width: 200px;
+	background-image: url("images/dragon.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+table#results td{
+	background-image: url("images/res_td_background.png");
+	background-size: 100%;
+	color: #ffffff;
+	font-size: 25px;
+	border-radius: 0px;
+}
+div#progressBar{
+	display: table;
+	height: 170px;
+	width: 900px;
+	margin: 10px auto;
+	border: 2px ridge #92671D;
+	background-image: url("images/winning_message.png");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+div#progress{
+	background-image: url("images/knight_move.gif");
+	background-repeat: no-repeat;
+	height: 150px;
+	width: 640px;
+	float: left;
+	padding-bottom: 15px;
+	padding-left: 115px;
+	
+
+}
+div#dragon{
+	background-image: url("images/red_dragon.gif");
+	background-repeat: no-repeat;
+	padding-right: 35px;
+	width: 85px;
+	height: 102px;
+	float: left;
+	background-position-x: -20px;
+}
+
+
+/* footer */
+p#footer{
+	text-align: center;
+	font-size: 15px;
+	padding: 5px;
+}

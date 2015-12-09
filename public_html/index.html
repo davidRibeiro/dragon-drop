@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Dragon Drop</title>
+																	<!-- css -->
+	<link type="text/css" rel="stylesheet" href="myStyle.css">
+																	<!-- javascript -->
+	<script type="text/javascript" src="script.js"> </script>
+																	<!-- 	codigos de caracteres especiais
+		á = &aacute;
+		ã = &atilde;
+		é = &eacute;
+		ó = &oacute;
+		ç = &ccedil;
+		
+
+		 -->
+	
+</head>
+<body>
+	
+	<div id="bodyFormat">
+																<!-- logo + titulo -->
+	<a href="" id="logotitle"></a>
+	<div id="header">	
+		<h3>A adventura educacional de juntar pares para derrotar um drag&atilde;o que, na realidade, nunca fez mal a ningu&eacute;m.</h3>
+															<!-- username + password -->
+		<div id="userpass">
+			<form> 
+		 		Username: <input type="text" name="username" id="un" value="Subzero"/><br>
+		 		Password: <input type="password" name="password" id="pw"/><br>
+		  		<input type="button" name="submit" value="Login" onclick="login()">
+		 	</form>
+	 	</div>
+	 																<!-- logout -->
+	 	<div id="logout" style="display: none">
+	 		<div id="hello"></div>
+	 		<form>
+	 			<input type="button" value="Logout" id="lout" onclick="logout()"/>
+	 		</form>
+	 	</div>
+	</div>
+	
+																	<!-- configuraï¿½ao -->
+	<div id="menu">																	
+		<div id="configuracao">
+				<div class="config"> 
+					<p> Selecciona o tipo de jogo:</p>
+					<form id="tipo"> 
+						<input type="radio" name="typeOfGame" id="aritmetica" value="aritmetica" checked="checked" /> Aritm&eacute;tica <br>
+						<input type="radio" name="typeOfGame" id="sinonimos"  value="sinonimos" disabled="disabled"/> Sin&oacute;nimos <br>
+						<input type="radio" name="typeOfGame" id="antonimos"  value="antonimos" disabled="disabled"/> Ant&oacute;nimos <br>
+						<input type="radio" name="typeOfGame" id="traducao"  value="traducao" disabled="disabled"/> Tradu&ccedil;&atilde;o<br> 
+					</form>
+				</div>
+				<div id="middleConfig" class="config"> 
+					<p> Selecciona o modo de jogo: </p>
+					<form id="njogadores">
+						<input type="radio" name="config" id="onePlayer" value="individual"  checked="checked"/> Modo Individual <br>
+						<input type="radio" name="config" id="twoPlayers" value="competitivo" disabled="disabled" /> Modo Competitivo <br> 
+					</form>
+				</div>
+				<div class="config"> 
+					<p>Selecciona o tamanho do tabuleiro: </p>
+					<form id="size">
+						<input type="radio" name="size" value="3" checked="checked"/> Pequeno (3x3) <br>
+						<input type="radio" name="size" value="4"  /> M&eacute;dio (4x4) <br>
+						<input type="radio" name="size" value="5"  /> Grande (5x5) <br>
+					</form>
+				</div>
+		</div>
+		
+																	<!-- controlo -->
+		<div id="control">
+			<input type="button" id="iniciarJogo" value="Iniciar" onclick="beginGame()"/>
+			<input type="button" id="abandonarJogo" value="Abandonar" disabled="disabled"  onclick="endGame()"/>
+			<input type="button" id="sincronizar" value="Sincronizar" disabled="disabled" onclick="synchronize()" />
+		</div> 
+	</div>
+	
+																	<!-- jogo -->
+	<div id="jogo">
+	
+		<table id="tab"></table>
+		<div id="points" style="display: none;"></div>
+		<table id="results"></table>
+		<div id="progressBar">
+			<div id="progress" style="display: none;"> </div>
+			<div id="dragon"></div>
+		</div>
+	</div>
+																	<!-- highscores -->
+		<table id="highscores">
+		<thead>
+			<tr>
+				<th> Posi&ccedil;&atilde;o </th>
+				<th> Jogador </th>
+				<th> Pontua&ccedil;&atilde;o </th>
+			</tr>
+		</thead>
+			<tr>
+				<th>1</th>
+				<td> - </td>
+				<td> - </td>
+			</tr>
+			<tr>
+				<th>2</th>
+				<td> - </td>
+				<td> - </td>
+			</tr>
+			<tr>
+				<th>3</th>
+				<td> - </td>
+				<td> - </td>
+			</tr>
+			<tr>
+				<th>4</th>
+				<td> - </td>
+				<td> - </td>
+			</tr>
+			<tr>
+				<th>5</th>
+				<td> - </td>
+				<td> - </td>
+			</tr>
+			<tr>
+				<th>6</th>
+				<td> - </td>
+				<td> - </td>
+			</tr>
+			<tr>
+				<th>7</th>
+				<td> - </td>
+				<td> - </td>
+			</tr>
+			<tr>
+				<th>8</th>
+				<td> - </td>
+				<td> - </td>
+			</tr>
+			<tr>
+				<th>9</th>
+				<td> - </td>
+				<td> - </td>
+			</tr>
+			<tr>
+				<th>10</th>
+				<td> - </td>
+				<td> - </td>
+			</tr>
+			<tfoot id="userPoints" style="display: none">
+				<tr>
+					<th> Pontua&ccedil;&atilde;o: </th>
+					<td id="namePoints"> </td>
+					<td id="yourScore"> </td>
+				</tr>
+			</tfoot>
+		</table>
+	
+	
+																	<!-- footer -->
+	<p id="footer"> Trabalho realizado por David Ribeiro e Ricardo Godinho - 2013/2014 </p>
+	</div>
+</body>
+</html>
